@@ -1,3 +1,10 @@
+'''
+Author: Eric Reschke
+Cite: https://metricsnavigator.org/mortality-rates/
+Last Reviewed: 2022-10-19
+License: Open to all
+'''
+
 import pandas as pd
 import numpy as np
 from sklearn.metrics import confusion_matrix
