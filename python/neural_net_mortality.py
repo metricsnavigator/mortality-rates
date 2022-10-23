@@ -99,19 +99,19 @@ y_pred = classifier.predict(X)
 y_export = pd.DataFrame(y_pred)
 y_export.columns=['y_pred']
 
-df_part2['final_Y'] = y_export['y_pred']
+df_part2['Predicted_cohort'] = y_export['y_pred']
 df_part2['Mortality'] = round(dataImport['Mortality'],0)
 
 # export the initial run to csv
 df_part2.to_csv('mortality_rate_predictions_part2.csv',index=False)
 
 # accuracy check on part2 run
-df_part2['Accuracy'] = np.where(df_part2['Mortality_cohort']==df_part2['final_Y'],1,0)
+df_part2['Accuracy'] = np.where(df_part2['Mortality_cohort']==df_part2['Predicted_cohort'],1,0)
 mlp_training_accuracy = round(np.sum(df_part2['Accuracy'])/len(df_part2),4)
 print('\nInitial Run Accuracy:',mlp_training_accuracy,'\n')
 
 # confusion matrix
-cTrainingMatrix = confusion_matrix(df_part2['Mortality_cohort'],df_part2['final_Y'])
+cTrainingMatrix = confusion_matrix(df_part2['Mortality_cohort'],df_part2['Predicted_cohort'])
 cTrainingMatrix = pd.DataFrame(cTrainingMatrix)
 RunError = round(cTrainingMatrix[0][1]/cTrainingMatrix[1][1],2)
     
