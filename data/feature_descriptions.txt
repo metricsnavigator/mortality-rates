@@ -1,0 +1,15 @@
+Precipitation: Average annual precipitation in inches
+JanuaryF: Average January temperature in degrees F
+JulyF: Average July temperature in degrees F
+Over65: % of population aged 65 or older
+Household: Average household size
+Education: Median school years completed by those over 22
+Housing: % of housing units which are sound & with all facilities
+Density: Population per sq. mile in urbanized areas
+WhiteCollar: % employed in white collar occupations
+LowIncome: % of families with income < $3000
+HC: Relative hydrocarbon pollution potential
+NOX: Relative nitric oxides pollution potential
+SO2: Relative sulphur dioxide pollution potential
+Humidity: Annual average % relative humidity at 1pm
+Mortality: Total age-adjusted mortality rate per 100,000
