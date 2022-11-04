@@ -41,6 +41,8 @@ var layout = {
   yaxis: {
     range: [800,1150]
   },
+  showlegend: true,
+  legend: {"orientation": "h"},
   title:'Precipitation & Mortality'
 };
 var config = {responsive: true}
