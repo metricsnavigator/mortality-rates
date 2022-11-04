@@ -59,9 +59,9 @@ p1df1 = df_part1[df_part1.cluster==0]
 p1df2 = df_part1[df_part1.cluster==1]
 p1df3 = df_part1[df_part1.cluster==2]
 
-p1c1 = plt.scatter(df1.Precipitation,p1df1['Mortality'],color='green')
-p1c2 = plt.scatter(df2.Precipitation,p1df2['Mortality'],color='red')
-p1c3 = plt.scatter(df3.Precipitation,p1df3['Mortality'],color='black')
+p1c1 = plt.scatter(p1df1.Precipitation,p1df1['Mortality'],color='green')
+p1c2 = plt.scatter(p1df2.Precipitation,p1df2['Mortality'],color='red')
+p1c3 = plt.scatter(p1df3.Precipitation,p1df3['Mortality'],color='black')
 plt.xlabel('Precipitation')
 plt.ylabel('Mortality')
 plt.legend([p1c1,p1c2,p1c3],['Cluster 1','Cluster 2','Cluster 3'])
@@ -103,10 +103,10 @@ p2df1 = df_part2[df_part2.cluster==0]
 p2df2 = df_part2[df_part2.cluster==1]
 p2df3 = df_part2[df_part2.cluster==2]
 
-p2c1 = plt.scatter(p2df1.Precipitation,p2df1['Mortality'],color='green')
-p2c2 = plt.scatter(p2df2.Precipitation,p2df2['Mortality'],color='red')
-p2c3 = plt.scatter(p2df3.Precipitation,p2df3['Mortality'],color='black')
-plt.xlabel('Precipitation')
+p2c1 = plt.scatter(p2df1.LowIncome_scale,p2df1['Mortality'],color='green')
+p2c2 = plt.scatter(p2df2.LowIncome_scale,p2df2['Mortality'],color='red')
+p2c3 = plt.scatter(p2df3.LowIncome_scale,p2df3['Mortality'],color='black')
+plt.xlabel('LowIncome')
 plt.ylabel('Mortality')
 plt.legend([p2c1,p2c2,p2c3],['Cluster 1','Cluster 2','Cluster 3'])
 
