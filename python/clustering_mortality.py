@@ -1,7 +1,7 @@
 '''
 Author: Eric Reschke
-Cite: https://metricsnavigator.org/mortality-rates/
-Last Reviewed: 2022-10-23
+Cite: https://metricsnavigator.org/mortality-rates-deep-dive/
+Last Reviewed: 2022-11-04
 License: Open to all
 '''
 
@@ -59,10 +59,10 @@ p1df1 = df_part1[df_part1.cluster==0]
 p1df2 = df_part1[df_part1.cluster==1]
 p1df3 = df_part1[df_part1.cluster==2]
 
-p1c1 = plt.scatter(p1df1.Precipitation,p1df1['Mortality'],color='green')
-p1c2 = plt.scatter(p1df2.Precipitation,p1df2['Mortality'],color='red')
-p1c3 = plt.scatter(p1df3.Precipitation,p1df3['Mortality'],color='black')
-plt.xlabel('Precipitation')
+p1c1 = plt.scatter(p1df1.Education,p1df1['Mortality'],color='green')
+p1c2 = plt.scatter(p1df2.Education,p1df2['Mortality'],color='red')
+p1c3 = plt.scatter(p1df3.Education,p1df3['Mortality'],color='black')
+plt.xlabel('Education')
 plt.ylabel('Mortality')
 plt.legend([p1c1,p1c2,p1c3],['Cluster 1','Cluster 2','Cluster 3'])
 
