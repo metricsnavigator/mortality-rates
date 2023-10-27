@@ -24,11 +24,10 @@ def zScores(df,col):
     else:
         samplePop = len(df)-1
         avg = np.mean(df[col])
-        df['varEach'] = (df[col]-avg)**2
-        var = sum(df['varEach'])/(samplePop)
+        varEach = (df[col]-avg)**2
+        var = sum(varEach)/(samplePop)
         sd = np.sqrt(var)
         df[col+'zScore'] = (df[col]-avg)/sd
-        df.drop('varEach',axis=1,inplace=True)
         return(df)
 
 dataImport = pd.read_csv('1. pollution_data.csv')
@@ -36,8 +35,8 @@ df_training = pd.DataFrame.copy(dataImport)
 
 # assign z-scores to each metric along with cohorts
 for i in df_training:
-  df_training[str(i)] = zScores(df_training,str(i))
-  df_training[str(i)+'_cohort'] = np.floor(abs(df_training[str(i)+'zScore'])+1)
+    zScores(df_training,str(i))
+    df_training[str(i)+'_cohort'] = np.floor(abs(df_training[str(i)+'zScore'])+1)
 
 df_training = df_training[['Precipitation_cohort','JanuaryF_cohort','JulyF_cohort','Over65_cohort','Household_cohort',
                            'Education_cohort','Housing_cohort','Density_cohort','WhiteCollar_cohort','LowIncome_cohort',
