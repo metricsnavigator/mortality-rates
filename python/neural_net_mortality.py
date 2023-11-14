@@ -1,7 +1,7 @@
 '''
 Author: Eric Reschke
 Cite: https://www.metricsnavigator.com/mortality-rates-deep-dive/
-Last Reviewed: 2023-10-27
+Last Reviewed: 2023-11-14
 License: Open to all
 '''
 
