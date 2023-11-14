@@ -1,7 +1,7 @@
 '''
 Author: Eric Reschke
-Cite: https://metricsnavigator.org/mortality-rates-intro/
-Last Reviewed: 2022-10-19
+Cite: https://www.metricsnavigator.com/mortality-rates-introduction/
+Last Reviewed: 2023-11-14
 License: Open to all
 '''
 
